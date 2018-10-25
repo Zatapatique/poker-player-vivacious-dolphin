@@ -55,7 +55,7 @@ class Player {
 
                 let result = JSON.parse(data).explanation;
                     console.log(result);
-                    if (JSON.parse(xmlHttp.responseText)["win"] > 0.7){
+                    if (JSON.parse(data)["win"] > 0.7){
                       bet(1000); 
                     }else{
                       bet(0);
