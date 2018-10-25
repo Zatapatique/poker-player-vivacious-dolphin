@@ -1,4 +1,9 @@
+const http = require('http');
+
 class Player {
+
+  //let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+  
 
   static get VERSION() {
     return '0.1';
@@ -6,14 +11,13 @@ class Player {
 
   static betRequest(gameState, bet) {
 
-    bet(1000);
-    //calc(gameState);
+    //bet(1000);
+    calc(gameState);
   }
 
   static calc(gameState){
 
-    let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-    
+      
         let json = gameState;
     
         let communityCards = json["community_cards"];
@@ -43,18 +47,30 @@ class Player {
         console.log(community);
         console.log(hand);
     
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", "https://poker-odds.p.mashape.com/hold-em/odds?community=" + community +"&hand="+hand + "&players=3", false );
-        xmlHttp.setRequestHeader("X-Mashape-Key","06yulBYBYNmshGizQx3vY4pM3vXCp1eC6mKjsnQKiz3GI3tlRz");
-        xmlHttp.send(null);
-        let result = JSON.parse(xmlHttp.responseText)["win"];
-    
-        if (result > 0.7){ 
-          bet(1000) 
-        }else {
-          bet (0);
+        let options = {
+          host:"https://poker-odds.p.mashape.com/hold-em/odds?community=" + community +"&hand="+hand + "&players=3",
+          headers: {"X-Mashape-Key":"06yulBYBYNmshGizQx3vY4pM3vXCp1eC6mKjsnQKiz3GI3tlRz"}
         }
-    
+
+        http.get(options, (res) => {
+          
+            resp.on('data', (chunk) => {
+            data += chunk;
+            });
+
+            resp.on('end', () => {
+
+            let result = JSON.parse(data).explanation;
+            console.log(result);
+            if (JSON.parse(xmlHttp.responseText)["win"] > 0.7){
+              bet(1000); 
+            }else{
+              bet(0);
+            }
+        });
+
+      });
+      
   }
 
 
