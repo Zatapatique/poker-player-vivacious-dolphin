@@ -39,7 +39,7 @@ class Player {
           hand += card.rank + card.suit.substring(0,1) + comma;
         }  
     
-        console.log(bet);
+        console.log(betValue);
         console.log(community);
         console.log(hand);
     
