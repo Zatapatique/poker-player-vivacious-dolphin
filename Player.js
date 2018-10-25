@@ -8,9 +8,6 @@ class Player {
 
   static betRequest(gameState, bet) {
 
-    bet(10000);
-    return;
-
     let json = gameState;
 
     let communityCards = json["community_cards"];
