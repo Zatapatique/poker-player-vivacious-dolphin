@@ -12,13 +12,8 @@ class Player {
   static betRequest(gameState, bet) {
 
     //bet(1000);
-    calc(gameState);
-  }
-
-  static calc(gameState){
-
-      
-        let json = gameState;
+    //calc(gameState);
+    let json = gameState;
     
         let communityCards = json["community_cards"];
         console.log(communityCards);
@@ -71,9 +66,8 @@ class Player {
 
       });
       
+
   }
-
-
 
   static showdown(gameState) {
 
