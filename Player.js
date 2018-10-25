@@ -10,7 +10,7 @@ class Player {
     let betValue = 0;
 
     //calc(gameState);
-    let json = gameState;
+        let json = gameState;
     
         let communityCards = json["community_cards"];
         console.log(communityCards);
@@ -32,7 +32,7 @@ class Player {
         let card2 = holeCards[2];
 
         if ((card1.rank == "10" || card1.rank == "J" ||  card1.rank == "Q" ||  card1.rank == "K" ||  card1.rank == "A")&&(card2.rank == "10" || card2.rank == "J" ||  card2.rank == "Q" ||  card2.rank == "K" ||  card2.rank == "A")){
-            bet = 1000;
+            betValue = 1000;
         }
 
         for (let card of holeCards){
