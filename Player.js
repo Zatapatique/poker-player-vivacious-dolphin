@@ -15,10 +15,10 @@ class Player {
         let json = gameState;
     
         let communityCards = json["community_cards"];
-        console.log(communityCards);
+      //  console.log(communityCards);
     
         let holeCards = json["players"][json["in_action"]]["hole_cards"]
-        console.log(holeCards);
+    //    console.log(holeCards);
     
         let comma = "%2C";
     
