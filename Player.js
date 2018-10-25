@@ -49,13 +49,13 @@ class Player {
 
         http.get(options, (res) => {
           
-            data = "";
+            let data = "";
             resp.on('data', (chunk) => {
                 data = chunk;
 
-                let result = JSON.parse(data).explanation;
+                let result = JSON.parse(data);
                     console.log(result);
-                    if (JSON.parse(data)["win"] > 0.7){
+                    if (result["win"] > 0.7){
                       bet(1000); 
                     }else{
                       bet(0);
