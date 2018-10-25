@@ -58,8 +58,12 @@ class Player {
   }
 
   static showdown(gameState) {
+    try{
       console.log("SHOWDOWN:")
       console.log(gameState);
+    }catch(e){
+
+    }
 
   }
 
