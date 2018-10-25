@@ -2,7 +2,7 @@ class Player {
   
 
   static get VERSION() {
-    return '0.1';
+    return 'Thanks for all the fish';
   }
 
   static betRequest(gameState, bet) {
