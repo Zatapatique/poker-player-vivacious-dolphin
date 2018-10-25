@@ -1,8 +1,4 @@
-const http = require('http');
-
 class Player {
-
-  //let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
   
 
   static get VERSION() {
@@ -11,9 +7,10 @@ class Player {
 
   static betRequest(gameState, bet) {
 
-    bet(1000);
+    let betValue = 0;
+
     //calc(gameState);
-    /*let json = gameState;
+    let json = gameState;
     
         let communityCards = json["community_cards"];
         console.log(communityCards);
@@ -26,45 +23,27 @@ class Player {
         let community = "";
     
         for (let card of communityCards){
+         
           community += card.rank + card.suit.substring(0,1) + comma;
         }  
-    
         let hand = "";
+
+        let card1 = holeCards[0];
+        let card2 = holeCards[2];
+
+        if ((card1.rank == "10" || card1.rank == "J" ||  card1.rank == "Q" ||  card1.rank == "K" ||  card1.rank == "A")&&(card2.rank == "10" || card2.rank == "J" ||  card2.rank == "Q" ||  card2.rank == "K" ||  card2.rank == "A")){
+            bet = 1000;
+        }
+
         for (let card of holeCards){
           hand += card.rank + card.suit.substring(0,1) + comma;
         }  
-        if (community.length > 0)
-        community = community.substring(0,community.length -3);
     
-    
-        hand = hand.substring(0,hand.length -3);
-    
+        console.log(bet);
         console.log(community);
         console.log(hand);
     
-        let options = {
-          hostname:"https://poker-odds.p.mashape.com/hold-em/odds?community=" + community +"&hand="+hand + "&players=3",
-          headers: {"X-Mashape-Key":"06yulBYBYNmshGizQx3vY4pM3vXCp1eC6mKjsnQKiz3GI3tlRz"}
-        }
-
-        http.get(options, (res) => {
-          
-            let data = "";
-            resp.on('data', (chunk) => {
-                data = chunk;
-
-                let result = JSON.parse(data);
-                    console.log(result);
-                    if (result["win"] > 0.7){
-                      bet(1000); 
-                    }else{
-                      bet(0);
-                  }
-            });
-
-         
-
-      });*/
+        bet(betValue);
       
 
   }
