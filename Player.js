@@ -11,9 +11,9 @@ class Player {
 
   static betRequest(gameState, bet) {
 
-    //bet(1000);
+    bet(1000);
     //calc(gameState);
-    let json = gameState;
+    /*let json = gameState;
     
         let communityCards = json["community_cards"];
         console.log(communityCards);
@@ -62,18 +62,9 @@ class Player {
                   }
             });
 
-           /* resp.on('end', () => {
+         
 
-            let result = JSON.parse(data).explanation;
-            console.log(result);
-            if (JSON.parse(xmlHttp.responseText)["win"] > 0.7){
-              bet(1000); 
-            }else{
-              bet(0);
-            }
-        });*/
-
-      });
+      });*/
       
 
   }
