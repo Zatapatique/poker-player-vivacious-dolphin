@@ -32,6 +32,9 @@ class Player {
 
         let card1 = holeCards[0];
         let card2 = holeCards[1];
+        console.log(card1)
+        console.log(card2)
+
 
         if ((card1.rank == "10" || card1.rank == "J" ||  card1.rank == "Q" ||  card1.rank == "K" ||  card1.rank == "A")&&(card2.rank == "10" || card2.rank == "J" ||  card2.rank == "Q" ||  card2.rank == "K" ||  card2.rank == "A")){
             betValue = 1000;
@@ -46,7 +49,7 @@ class Player {
         console.log(hand);
     
       }catch(e){
-        
+
       }
         bet(betValue);
       
