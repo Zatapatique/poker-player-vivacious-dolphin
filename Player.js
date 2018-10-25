@@ -32,6 +32,7 @@ class Player {
 
         let card1 = holeCards[0];
         let card2 = holeCards[1];
+        console.log("MY CARDS:")
         console.log(card1)
         console.log(card2)
 
@@ -44,9 +45,9 @@ class Player {
           hand += card.rank + card.suit.substring(0,1) + comma;
         }  
     
+        console.log("BET VALUE")
         console.log(betValue);
-        console.log(community);
-        console.log(hand);
+
     
       }catch(e){
 
@@ -57,7 +58,8 @@ class Player {
   }
 
   static showdown(gameState) {
-
+      console.log("SHOWDOWN:")
+      console.log(showdown);
 
   }
 
