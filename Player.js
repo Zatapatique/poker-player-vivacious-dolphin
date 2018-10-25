@@ -49,11 +49,20 @@ class Player {
 
         http.get(options, (res) => {
           
+            data = "";
             resp.on('data', (chunk) => {
-            data += chunk;
+                data = chunk;
+
+                let result = JSON.parse(data).explanation;
+                    console.log(result);
+                    if (JSON.parse(xmlHttp.responseText)["win"] > 0.7){
+                      bet(1000); 
+                    }else{
+                      bet(0);
+                    }
             });
 
-            resp.on('end', () => {
+           /* resp.on('end', () => {
 
             let result = JSON.parse(data).explanation;
             console.log(result);
@@ -62,7 +71,7 @@ class Player {
             }else{
               bet(0);
             }
-        });
+        });*/
 
       });
       
