@@ -43,7 +43,7 @@ class Player {
         console.log(hand);
     
         let options = {
-          host:"https://poker-odds.p.mashape.com/hold-em/odds?community=" + community +"&hand="+hand + "&players=3",
+          hostname:"https://poker-odds.p.mashape.com/hold-em/odds?community=" + community +"&hand="+hand + "&players=3",
           headers: {"X-Mashape-Key":"06yulBYBYNmshGizQx3vY4pM3vXCp1eC6mKjsnQKiz3GI3tlRz"}
         }
 
@@ -59,7 +59,7 @@ class Player {
                       bet(1000); 
                     }else{
                       bet(0);
-                    }
+                  }
             });
 
            /* resp.on('end', () => {
