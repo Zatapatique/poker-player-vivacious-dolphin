@@ -1,6 +1,10 @@
-public static class CardCodeConverter {
-    public static String ToCode(this Card card)
+namespace PokerBot
+{
+    public static class CardCodeConverter 
     {
-        return card.rank + card.suit[0];
+        public static string ToCode(this Card card)
+        {
+            return card.rank + card.suit[0];
+        }
     }
 }
