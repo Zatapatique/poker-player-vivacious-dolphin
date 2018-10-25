@@ -9,6 +9,8 @@ class Player {
 
     let betValue = 0;
 
+
+    try{
     //calc(gameState);
         let json = gameState;
     
@@ -43,6 +45,9 @@ class Player {
         console.log(community);
         console.log(hand);
     
+      }catch(e){
+        
+      }
         bet(betValue);
       
 
