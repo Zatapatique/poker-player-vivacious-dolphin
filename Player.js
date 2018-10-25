@@ -7,7 +7,9 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
-    bet(0);
+
+    bet(10000);
+    return;
 
     let json = gameState;
 
