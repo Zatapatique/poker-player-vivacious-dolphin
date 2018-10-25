@@ -1,5 +1,3 @@
-let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
 class Player {
 
   static get VERSION() {
@@ -7,6 +5,8 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
+
+    let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
     let json = gameState;
 
